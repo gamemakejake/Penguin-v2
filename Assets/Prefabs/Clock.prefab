@@ -45,17 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTime:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 5140f41eddc22c74ba8082970810bb9c, type: 2}
   maxTime:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 274e3f262b3d32448b7de71496c5d65f, type: 2}
   gameEnd:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: bca9bb46de4b8b245a25d0563048c24e, type: 2}
 --- !u!114 &4575796450264656860
 MonoBehaviour:
   m_ObjectHideFlags: 0
