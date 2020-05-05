@@ -52,20 +52,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   person: {fileID: 0}
   agent: {fileID: 5519079582490429155}
-  viewpoints: []
-  spots: []
+  viewpoints:
+  - {fileID: 3961319540917273780, guid: 2a4dfdfa8a4be3242aa91b8ffdf54ead, type: 3}
+  - {fileID: 3766722497095659456, guid: 8d3a3c4f3a436e14385a8acde4ba0134, type: 3}
+  - {fileID: 2850052377254300148, guid: 53c112dd98b5651469514d0df6056db2, type: 3}
+  spots:
+  - {fileID: 3196780127214423799, guid: 9dda7d4db5516e54685ca4ac8c0c42e5, type: 3}
+  - {fileID: 5571444845595539690, guid: acf5cc4e00f15ad4cbb30e70a34e130d, type: 3}
+  - {fileID: 8971863498327890016, guid: 8a370a414fb15054f96c486bc1d4af96, type: 3}
   dissatisfaction:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 39623a9d2d491bd4cbd6618650c89621, type: 2}
   lowDissatisfaction:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 155912ae889befe41a1a29c2cf1c2db0, type: 2}
   highDissatisfaction:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 7213f69953363064d8b82c6d2f5bd017, type: 2}
 --- !u!65 &1206813510131049786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 3063870276741933535, guid: c034bbacfc002a141b6b37886cceb865,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_Child Variant
+      value: EnemyPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 3063870277707385656, guid: c034bbacfc002a141b6b37886cceb865,
         type: 3}
