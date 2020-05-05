@@ -1,123 +1,75 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public interface Decision
-{
-    Decision makeDecision();
-}
+using UnityEngine.AI;
 
 public class ChildAI : MonoBehaviour
 {
-    public Person agent;
-    Decision root;
+    public Person person;
+    public NavMeshAgent agent;
+    public List<Transform> viewpoints;
+    public List<Transform> spots;
+    public IntReference dissatisfaction;
+    public IntReference lowDissatisfaction;
+    public IntReference highDissatisfaction;
+    float timer = 10;
     // Start is called before the first frame update
     void Start()
     {
-        root = new dissatisfactionLevel(agent, 
-                    new lowMedium(agent, 
-                        new childLow(agent), 
-                        new childMedium(agent)),
-                    new childHigh(agent));
+        if(dissatisfaction.Value < highDissatisfaction.Value)
+        {
+            int rand = Random.Range(0, viewpoints.Count);
+            agent.SetDestination(viewpoints[rand].position);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Decision currentDecision = root;
-        while (currentDecision != null)
+        timer -= 1 * Time.deltaTime;
+        if (dissatisfaction.Value > highDissatisfaction.Value && timer <= 0)
         {
-            currentDecision = currentDecision.makeDecision();
+            int random = Random.Range(0, spots.Count + 1);
+            for (int i = 0; i < spots.Count; i++)
+            {
+                if (random == i)
+                {
+                    agent.SetDestination(spots[i].position);
+                }
+                person.atGate = false;
+                timer = 10;
+            }
+        }
+        if (dissatisfaction.Value > lowDissatisfaction.Value && dissatisfaction.Value < highDissatisfaction.Value && timer <= 0)
+        {
+            int r = Random.Range(0, 2);
+            if (r == 1)
+            {
+                int random = Random.Range(0, spots.Count + 1);
+                for (int i = 0; i < spots.Count; i++)
+                {
+                    if(random == i)
+                    {
+                        agent.SetDestination(spots[i].position);
+                    }
+                
+                }
+                person.atGate = false;
+                timer = 10;
+            }
+            else
+            {
+                int rand = Random.Range(0, viewpoints.Count);
+                agent.SetDestination(viewpoints[rand].position);
+            }
         }
     }
-}
 
-class dissatisfactionLevel : Decision // question // meter at or below high
-{
-    Person agent;
-    Decision lowMed;
-    Decision high;
-
-    public dissatisfactionLevel() { }
-    public dissatisfactionLevel(Person agent, Decision lowMedium, Decision high)
+    void OnCollisionEnter(Collision collision)
     {
-        this.agent = agent;
-        lowMed = lowMedium;
-        this.high = high;
-    }
-
-    public Decision makeDecision()
-    {
-        if (agent.dissatisfaction.Value < agent.lowDissatisfaction.Value)
+        if(collision.gameObject.tag == "ViewPoint")
         {
-            return lowMed;
+            person.atGate = true;
         }
-        else
-            return high;
-    }
-}
-
-class lowMedium : Decision // question // medium or low
-{
-    Person agent;
-    Decision low;
-    Decision medium;
-    public lowMedium() { }
-    public lowMedium(Person agent, Decision low, Decision medium)
-    {
-        this.agent = agent;
-        this.low = low;
-        this.medium = medium;
-    }
-    public Decision makeDecision()
-    {
-        if (agent.dissatisfaction.Value > agent.lowDissatisfaction.Value && agent.lowDissatisfaction.Value < agent.highDissatisfaction.Value)
-        {
-            return medium;
-        }
-        else
-            return low;
-    }
-}
-
-class childLow : Decision // a lot of children
-{
-    Person agent;
-    public childLow() { }
-    public childLow(Person agent)
-    {
-        this.agent = agent;
-    }
-    public Decision makeDecision()
-    {
-        return null;
-    }
-}
-
-class childMedium : Decision // less children
-{
-    Person agent;
-    public childMedium() { }
-    public childMedium(Person agent)
-    {
-        this.agent = agent;
-    }
-    public Decision makeDecision()
-    {
-        return null;
-    }
-}
-
-class childHigh : Decision // little to no children
-{
-    Person agent;
-    public childHigh() { }
-    public childHigh(Person agent)
-    {
-        this.agent = agent;
-    }
-    public Decision makeDecision()
-    {
-        return null;
     }
 }
