@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BiteZone
   - HandArea
+  - Biting
   layers:
   - Default
   - TransparentFX
