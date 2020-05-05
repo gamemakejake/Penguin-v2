@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
+    path: Assets/Scenes/JakeUIMenu.unity
+    guid: ac6d7cda34ab487478f00939f0f53600
+  - enabled: 1
     path: Assets/Scenes/MainLevel.unity
     guid: d647804fbecd9fc459b5b000b288b6af
   m_configObjects: {}
