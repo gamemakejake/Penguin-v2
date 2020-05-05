@@ -39,7 +39,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139279622126527852}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
@@ -73,7 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HandArea: {fileID: 1139279622126527852}
-  HandParticles: {fileID: 0}
+  HandParticles: {fileID: 6099778530637751167}
+  cooldown: 10
 --- !u!1001 &2607005615588823620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148,6 +149,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 688d219c82e88fa4dac7a0fabfe13eba, type: 3}
+--- !u!1 &6099778530637751167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8109634421162340667, guid: 688d219c82e88fa4dac7a0fabfe13eba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2607005615588823620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3626136452147859345
 PrefabInstance:
   m_ObjectHideFlags: 0
