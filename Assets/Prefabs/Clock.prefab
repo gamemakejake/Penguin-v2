@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8474390646401319282}
   - component: {fileID: 8474390646401319283}
+  - component: {fileID: 4575796450264656860}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -43,6 +44,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7897c8646a9c6d41b0436cc28ea5688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTime: {fileID: 11400000, guid: 5140f41eddc22c74ba8082970810bb9c, type: 2}
-  maxTime: {fileID: 11400000, guid: 274e3f262b3d32448b7de71496c5d65f, type: 2}
-  gameEnd: 0
+  myTime:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  maxTime:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  gameEnd:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+--- !u!114 &4575796450264656860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474390646401319280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cba234b51065134e85fd20247b47a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a97f8ce69b6e03b4eb161f03cb87d080, type: 2}
