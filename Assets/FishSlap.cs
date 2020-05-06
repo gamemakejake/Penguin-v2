@@ -24,7 +24,7 @@ public class FishSlap : MonoBehaviour
 
     private void OnTriggerStay(Collider other) 
     {
-        if (other.tag == "Biting" && mTime >= recharge.Value)
+        if (other.tag == "Biting" && mTime >= recharge.Value && disatisfaction.Value >= disChange.Value)
         {
             mTime = 0;
             disatisfaction.Value -= disChange.Value;
