@@ -7,6 +7,7 @@ public class Clock : MonoBehaviour
     public FloatReference myTime;
     public FloatReference maxTime;
     public BoolReference gameEnd;
+    public GameObject WinScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,18 @@ public class Clock : MonoBehaviour
         if (myTime.Value > maxTime.Value)
         {
             gameEnd.Value = true;
+            EndGame();
+
         }
 
+    }
+
+    void EndGame()
+    {
+        if (gameEnd.Value == true)
+        {
+            Time.timeScale = 0f;
+            WinScreen.SetActive(true);
+        }
     }
 }

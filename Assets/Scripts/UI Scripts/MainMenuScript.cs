@@ -30,4 +30,9 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit();
     }
 
+    public void MainManu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
