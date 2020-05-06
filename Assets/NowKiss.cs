@@ -12,12 +12,14 @@ public class NowKiss : MonoBehaviour
 
    private void OnTriggerStay(Collider other) 
    {
-       if (other.tag == "Biting" && isHit == false && dissatisfaction.Value >= dissAmount.Value)
+       if (other.tag == "Biting" && isHit == false && 
+            dissatisfaction.Value >= dissAmount.Value && 
+            Input.GetButtonDown("Fire1"))
        {
            isHit = true;
            dissatisfaction.Value -= dissAmount.Value;
-           mRB.AddForce(new Vector3(5, 7, 13), ForceMode.Impulse);
-           mSound.SetActive(true);
+            mRB.AddForce(new Vector3(5, 7, 13), ForceMode.Impulse);
+            mSound.SetActive(true);
            Destroy(this.gameObject, 3f);
 
        }

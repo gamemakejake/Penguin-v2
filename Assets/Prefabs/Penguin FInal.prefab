@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 9135695738776850954}
   m_Layer: 0
   m_Name: Penguin FInal
-  m_TagString: Untagged
+  m_TagString: Biting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 39623a9d2d491bd4cbd6618650c89621, type: 2}
   dissAmount:
     UseConstant: 1
-    ConstantValue: 40
+    ConstantValue: 5
     Variable: {fileID: 0}
   mRB: {fileID: 3510358865640210269}
   mSound: {fileID: 658602326012742595}
