@@ -150,7 +150,7 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 39623a9d2d491bd4cbd6618650c89621, type: 2}
   disChange:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 16
     Variable: {fileID: 0}
   recharge:
     UseConstant: 1
