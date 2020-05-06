@@ -8,6 +8,8 @@ public class Disatisfaction : MonoBehaviour
     public IntReference minDis;
     public IntReference maxDis;
     public BoolReference gameOver;
+    float mTime;
+    public float timeDelay = 1f;
     
     // Start is called before the first frame update
     void Start()
@@ -23,5 +25,14 @@ public class Disatisfaction : MonoBehaviour
         if (disatisfaction.Value < minDis.Value) disatisfaction.Value = minDis.Value;
 
         if (disatisfaction.Value > maxDis.Value) gameOver.Value = true;
+
+        mTime += Time.deltaTime;
+
+        if (mTime >= timeDelay)
+        {
+            disatisfaction.Value++;
+            mTime = 0;
+
+        }
     }
 }
