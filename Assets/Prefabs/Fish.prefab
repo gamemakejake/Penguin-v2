@@ -154,7 +154,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   recharge:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 15
     Variable: {fileID: 0}
   mAnimation: {fileID: 4759720513894479565}
   mLight: {fileID: 3147143288111971742}

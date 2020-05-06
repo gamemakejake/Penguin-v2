@@ -136,9 +136,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420733416242906250}
-  - component: {fileID: 3619126619686602183}
   - component: {fileID: 3510358865640210269}
   - component: {fileID: 9135695738776850954}
+  - component: {fileID: 4404380731769988711}
   m_Layer: 0
   m_Name: Penguin FInal
   m_TagString: Biting
@@ -163,20 +163,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3619126619686602183
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793407892698789529}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.9007994
-  m_Height: 4.5913453
-  m_Direction: 1
-  m_Center: {x: -0.018236399, y: 2.750367, z: -0.04006493}
 --- !u!54 &3510358865640210269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -215,6 +201,19 @@ MonoBehaviour:
     Variable: {fileID: 0}
   mRB: {fileID: 3510358865640210269}
   mSound: {fileID: 658602326012742595}
+--- !u!65 &4404380731769988711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793407892698789529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0333836, y: 4.376198, z: 1.7409954}
+  m_Center: {x: -0.047351956, y: 2.550558, z: 0.04547441}
 --- !u!1001 &391017319524613833
 PrefabInstance:
   m_ObjectHideFlags: 0

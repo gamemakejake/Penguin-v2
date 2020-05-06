@@ -19,17 +19,20 @@ public class FishSlap : MonoBehaviour
     private void Update() 
     {
         mTime += Time.deltaTime;
-
+        if (mTime >= recharge.Value)
+        {
+            mLight.SetActive(true);
+        }
     }
 
     private void OnTriggerStay(Collider other) 
     {
+
         if (other.tag == "Biting" && mTime >= recharge.Value && disatisfaction.Value >= disChange.Value)
         {
             mTime = 0;
             disatisfaction.Value -= disChange.Value;
             mAnimation.SetBool("FishPressed", true);
-            mLight.SetActive(true);
             slapSound.SetActive(true);
             Invoke ("ResetFish", 2F);
 
