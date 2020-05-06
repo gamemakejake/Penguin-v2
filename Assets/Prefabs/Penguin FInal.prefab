@@ -214,6 +214,7 @@ MonoBehaviour:
     ConstantValue: 10
     Variable: {fileID: 0}
   mRB: {fileID: 3510358865640210269}
+  mSound: {fileID: 658602326012742595}
 --- !u!1001 &391017319524613833
 PrefabInstance:
   m_ObjectHideFlags: 0

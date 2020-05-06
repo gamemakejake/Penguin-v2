@@ -8,6 +8,7 @@ public class NowKiss : MonoBehaviour
     public IntReference dissAmount;
     bool isHit = false;
     public Rigidbody mRB;
+    public GameObject mSound;
 
    private void OnTriggerStay(Collider other) 
    {
@@ -16,6 +17,7 @@ public class NowKiss : MonoBehaviour
            isHit = true;
            dissatisfaction.Value -= dissAmount.Value;
            mRB.AddForce(new Vector3(5, 7, 13), ForceMode.Impulse);
+           mSound.SetActive(true);
            Destroy(this.gameObject, 3f);
 
        }
