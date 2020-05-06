@@ -6654,6 +6654,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6809658321718388341, guid: 601f0966758877340aff97a71f1ad425,
+        type: 3}
+      propertyPath: disChange.ConstantValue
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601f0966758877340aff97a71f1ad425, type: 3}
 --- !u!1001 &5431106842940732065
