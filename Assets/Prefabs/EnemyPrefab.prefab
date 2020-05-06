@@ -119,6 +119,8 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 5041bae8e7c0ae04f9f8846be78c4373, type: 2}
   handBit: {fileID: 1790060097704748622}
+  bitSound: {fileID: 7061903145889233698, guid: 8087e04f9ddf75d4f86f0513af9b2bf4,
+    type: 3}
 --- !u!114 &506364947236900926
 MonoBehaviour:
   m_ObjectHideFlags: 0

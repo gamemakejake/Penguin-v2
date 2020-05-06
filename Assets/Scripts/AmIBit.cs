@@ -8,6 +8,7 @@ public class AmIBit : MonoBehaviour
     public IntReference disatisfaction;
     public IntReference disGain;
     public GameObject handBit;
+    public GameObject bitSound;
     
     private void OnTriggerEnter(Collider other) 
     {
@@ -15,6 +16,7 @@ public class AmIBit : MonoBehaviour
        {
            score.Value++;
            disatisfaction.Value += disGain.Value;
+           Instantiate(bitSound, transform.position, transform.rotation);
            Destroy(handBit);
 
        }   
