@@ -50,11 +50,19 @@ public class ChildAI : MonoBehaviour
                 {
                     if(random == i)
                     {
-                        agent.SetDestination(spots[i].position);
+                        if (agent)
+                        {
+                            agent.SetDestination(spots[i].position);
+                        }
+                        
                     }
                 
                 }
-                person.atGate = false;
+                if (person)
+                {
+                    person.atGate = false;
+                }
+                
                 timer = 10;
             }
             else
