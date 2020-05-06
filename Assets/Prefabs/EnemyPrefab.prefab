@@ -491,6 +491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanLoPoly_Rigged
       objectReference: {fileID: 0}
+    - target: {fileID: -268544259217442289, guid: 91e26cd85a218a94d8730b6118fe8dbb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7623ac8c6db9b2c47a8099a165f41a2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91e26cd85a218a94d8730b6118fe8dbb, type: 3}
 --- !u!1 &5020105795030227008 stripped

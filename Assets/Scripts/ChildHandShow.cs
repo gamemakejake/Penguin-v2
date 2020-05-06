@@ -18,7 +18,7 @@ private void OnTriggerStay(Collider other)
         hasShown = true;
         HandArea.SetActive(true);
         HandParticles.SetActive(true);
-        Invoke("HandsOff", 5f);
+        //Invoke("HandsOff", 5f);
 
     }
 }
