@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2959101952653307609}
   - component: {fileID: 4759720513894479553}
   - component: {fileID: 4759720513894479565}
+  - component: {fileID: 7315676230960497234}
+  - component: {fileID: 6809658321718388341}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -115,3 +117,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &7315676230960497234
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543208660186601989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: -0.00000095367426, y: -0.000004291535, z: -0.00000071525585}
+--- !u!114 &6809658321718388341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543208660186601989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feba33d193ffaa64a8e1eec5743aa9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disatisfaction:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 39623a9d2d491bd4cbd6618650c89621, type: 2}
+  disChange:
+    UseConstant: 1
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  recharge:
+    UseConstant: 1
+    ConstantValue: 5
+    Variable: {fileID: 0}
+  mAnimation: {fileID: 4759720513894479565}
