@@ -12,7 +12,7 @@ public class NowKiss : MonoBehaviour
 
    private void OnTriggerStay(Collider other) 
    {
-       if (other.tag == "Biting" && isHit == false)
+       if (other.tag == "Biting" && isHit == false && dissatisfaction.Value >= dissAmount.Value)
        {
            isHit = true;
            dissatisfaction.Value -= dissAmount.Value;
