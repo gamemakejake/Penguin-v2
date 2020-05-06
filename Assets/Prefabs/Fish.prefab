@@ -158,6 +158,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   mAnimation: {fileID: 4759720513894479565}
   mLight: {fileID: 3147143288111971742}
+  slapSound: {fileID: 7926509343381882047}
 --- !u!1 &7926509343381882047
 GameObject:
   m_ObjectHideFlags: 0

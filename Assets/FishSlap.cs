@@ -10,6 +10,7 @@ public class FishSlap : MonoBehaviour
     private float mTime;
     public Animator mAnimation;
     public GameObject mLight;
+    public GameObject slapSound;
 
     private void Start() 
     {
@@ -29,6 +30,7 @@ public class FishSlap : MonoBehaviour
             disatisfaction.Value -= disChange.Value;
             mAnimation.SetBool("FishPressed", true);
             mLight.SetActive(true);
+            slapSound.SetActive(true);
             Invoke ("ResetFish", 2F);
 
         }
@@ -38,5 +40,6 @@ public class FishSlap : MonoBehaviour
     {
         mAnimation.SetBool("FishPressed", false);
         mLight.SetActive(false);
+        slapSound.SetActive(false);
     }
 }
