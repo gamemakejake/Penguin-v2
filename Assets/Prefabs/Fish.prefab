@@ -156,6 +156,7 @@ MonoBehaviour:
     ConstantValue: 5
     Variable: {fileID: 0}
   mAnimation: {fileID: 4759720513894479565}
+  mLight: {fileID: 3147143288111971742}
 --- !u!1001 &620201182917021000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,6 +236,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4565465c482268f459c1b93f18b27623, type: 3}
+--- !u!1 &3147143288111971742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2537641594981511382, guid: 4565465c482268f459c1b93f18b27623,
+    type: 3}
+  m_PrefabInstance: {fileID: 620201182917021000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3147143288111971740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2537641594981511380, guid: 4565465c482268f459c1b93f18b27623,
